@@ -1,0 +1,25 @@
+<p>Create Celular</p>
+
+<form [formGroup]="createCelularForm" (ngSubmit)="createCelular()">
+    <input type="text" formControlName="marca" placeholder="Marca"><br>
+    <input type="datetime-local" formControlName="fechaDeCompra"><br>
+    <input type="datetime-local" formControlName="anoLanzamiento"><br>
+    <input type="number" formControlName="precio" placeholder="Precio"><br>
+    
+    <select formControlName="sistemaOperativo">
+        <option value="" disabled>Sistema Operativo</option>
+        <option value="Android">Android</option>
+        <option value="iOS">iOS</option>
+    </select><br>
+    
+    <select formControlName="gama">
+        <option value="" disabled>Gama</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+    </select><br>
+
+    <button type="submit" [disabled]="!createCelularForm.valid">Create</button>
+</form>
+
+<p *ngIf="message">{{message}}</p>
