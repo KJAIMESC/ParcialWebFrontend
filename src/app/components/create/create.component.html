@@ -2,7 +2,9 @@
 
 <form [formGroup]="createCelularForm" (ngSubmit)="createCelular()">
     <input type="text" formControlName="marca" placeholder="Marca"><br>
+    <p>Fecha de Compra</p>
     <input type="datetime-local" formControlName="fechaDeCompra"><br>
+    <p>Año Lanzamiento</p>
     <input type="datetime-local" formControlName="anoLanzamiento"><br>
     <input type="number" formControlName="precio" placeholder="Precio"><br>
     
